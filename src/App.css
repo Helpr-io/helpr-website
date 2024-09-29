@@ -72,9 +72,9 @@ body, html {
 
 /* Hero Section */
 .hero {
-  background-color: #fff;
+  background-color: #f7f7f7;
   color: #000;
-  height: 40vh; /* Use vh for height */
+  height: 25vh; /* Use vh for height */
   display: flex;
   align-items: center;
   justify-content: center;

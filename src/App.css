@@ -53,10 +53,12 @@ body, html {
   color: #000; /* Svart text */
   text-decoration: none; /* Ingen understrykning */
   font-weight: bold;
+  cursor: pointer; 
 }
 
 .App-header nav ul li a:hover {
   background-color: #f0f0f0; /* Ljusgrå bakgrund vid hover */
+  cursor: pointer;
 }
 
 /* Responsiv design */

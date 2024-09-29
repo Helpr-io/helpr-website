@@ -65,9 +65,9 @@ function App() {
           <div className="section-text section-text-left">
             <h2>About Us</h2>
             <p>
-              At our company, we are dedicated to providing exceptional legal services.
-              With a focus on integrity, trust, and results, we help clients navigate 
-              complex legal landscapes with confidence.
+            This app was developed by the Talent Team, consisting of Jacob Carlberg, Hanna Petersson, and Axel Strid, in collaboration with AI Sweden and The Swedish Red Cross over a 10-week period during the summer of 2024.
+            The app’s functionality and code were entirely created, developed, and written by Jacob Carlberg, Hanna Petersson, and Axel Strid.
+            The original idea was conceived by Robin Boman from the Red Cross in Umeå, and it was further co-developed with the Talent Team.
             </p>
           </div>
           <div className="section-image">

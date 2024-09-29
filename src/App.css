@@ -1,0 +1,319 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  background-color: #f7f7f7; /* Ensure the background color is consistent */
+}
+
+.App {
+  width: 100%;
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #fff; /* Vit bakgrund */
+  padding: 1em 2vw; /* Padding inuti headern */
+  margin: 2vh auto; /* Skapar utrymme ovanför och under headern */
+  max-width: 90%; /* Lämnar utrymme på sidorna */
+  display: flex; /* Flexbox layout för logga och meny */
+  justify-content: space-between; /* Logga till vänster och meny till höger */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  border: 2px solid #ccc; /* Svart ram runt headern */
+  border-radius: 20px; /* Ger rundade hörn på headern */
+  box-sizing: border-box; /* Säkerställer att padding inte påverkar bredden */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.App-logo {
+  width: 50px; /* Ändra storlek här till önskad bredd */
+  height: auto; /* Behåll proportionerna */
+}
+
+
+.App-header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.App-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Visar menylänkar horisontellt */
+}
+
+.App-header nav ul li {
+  margin-left: 2vw; /* Utrymme mellan varje länk */
+}
+
+.App-header nav ul li a {
+  color: #000; /* Svart text */
+  text-decoration: none; /* Ingen understrykning */
+  font-weight: bold;
+}
+
+.App-header nav ul li a:hover {
+  background-color: #f0f0f0; /* Ljusgrå bakgrund vid hover */
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .App-header nav ul li {
+    margin-left: 1vw; /* Minska marginalen på mindre skärmar */
+  }
+
+  .App-logo {
+    width: 100px; /* Minska loggans storlek på mindre skärmar */
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #fff;
+  color: #000;
+  height: 40vh; /* Use vh for height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 3rem; /* Use rem for scalable font size */
+  text-align: center;
+}
+
+/* Moving Image Section */
+.moving-image-section {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb, #fad0c4);
+  background-size: 400% 400%;
+  animation: movingBG 12s ease infinite;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px; /* Rounded corners */
+}
+
+@keyframes movingBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fluid Shape */
+.fluid-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Behind the text */
+  opacity: 0.7; /* Transparency to make it subtle */
+  animation: flow 20s ease-in-out infinite;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(30px) translateY(-30px) scale(1.1);
+  }
+  50% {
+    transform: translateX(-30px) translateY(30px) scale(0.9);
+  }
+  75% {
+    transform: translateX(20px) translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+.moving-image-section h2 {
+  position: relative;
+  z-index: 2; /* Keep the text above the shape */
+  font-size: 2.5rem;
+  text-align: center;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+/* Floating Geometric Shapes */
+.floating-shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%; /* Make shapes circular */
+  animation: randomMovement 40s ease-in-out infinite; /* Slowed down */
+  opacity: 0.8;
+}
+
+/* Shape 1 */
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 5%;
+  animation-duration: 40s; /* Slower duration */
+  animation-delay: 0s; /* Random delay */
+}
+
+/* Shape 2 */
+.shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 80%;
+  animation-duration: 45s; /* Slower duration */
+  animation-delay: 5s; /* Random delay */
+}
+
+/* Shape 3 */
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 40%;
+  animation-duration: 50s; /* Slower duration */
+  animation-delay: 10s; /* Random delay */
+}
+
+/* Shape 4 */
+.shape-4 {
+  width: 120px;
+  height: 120px;
+  top: 70%;
+  left: 20%;
+  animation-duration: 60s; /* Slower duration */
+  animation-delay: 15s; /* Random delay */
+}
+
+@keyframes randomMovement {
+  0% {
+    transform: translate(0, 0) scale(1); /* Start inside the container */
+    opacity: 0.8;
+  }
+  20% {
+    transform: translate(50px, -80px) scale(1.1); /* Move out of the container */
+    opacity: 0.9;
+  }
+  40% {
+    transform: translate(-150px, 100px) scale(0.9); /* Move randomly */
+    opacity: 0.7;
+  }
+  60% {
+    transform: translate(120px, -50px) scale(1.2); /* Move back into view */
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-100px, 150px) scale(1); /* Move out again */
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1); /* Return to original position */
+    opacity: 0.8;
+  }
+}
+/* Section Styles */
+section {
+  padding: 5vh 5vw; /* Use vw and vh for padding */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-section, .demo-section, .presentation-section, .team-section {
+  background-color: white;
+  margin-bottom: 5vh; /* Space sections consistently using vh */
+}
+
+.about-content, .demo-content, .presentation-content, .team-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-image img, .demo-video iframe, .presentation-video iframe, .team-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flex Alignment */
+.about-content .about-text, .demo-content .demo-text, .presentation-content .presentation-text, .team-content .team-text {
+  flex: 1;
+  padding-right: 2vw; /* Use vw for padding */
+}
+
+.about-content .about-image, .demo-content .demo-video, .presentation-content .presentation-video, .team-content .team-image {
+  flex: 1;
+}
+
+/* Presentation video */
+.presentation-video {
+  position: relative;
+  padding-bottom: 30%; /* Detta är för 16:9-förhållandet (höjd / bredd = 9/16 = 56.25%) */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.presentation-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Team Section Specific Styles */
+.team-section {
+  background-color: #f1f1f1;
+}
+
+.team-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.team-text {
+  padding-right: 2vw; /* Use vw for padding */
+}
+
+/* Typewriter Container */
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}
+
+/* Style the Text Input */
+.typewriter-input {
+  width: 60vw;
+  max-width: 500px;
+  font-size: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace; /* Give it a typewriter-like font */
+  background-color: #f9f9f9;
+  color: #333;
+  caret-color: transparent; /* Hide the cursor */
+  outline: none;
+}

@@ -19,7 +19,7 @@ body, html {
   display: flex; /* Flexbox layout för logga och meny */
   justify-content: space-between; /* Logga till vänster och meny till höger */
   align-items: center; /* Centrerar innehållet vertikalt */
-  border: 2px solid #ccc; /* Svart ram runt headern */
+  border: 2px solid #ccc; /* Ram runt headern */
   border-radius: 20px; /* Ger rundade hörn på headern */
   box-sizing: border-box; /* Säkerställer att padding inte påverkar bredden */
   position: sticky;
@@ -31,7 +31,6 @@ body, html {
   width: 50px; /* Ändra storlek här till önskad bredd */
   height: auto; /* Behåll proportionerna */
 }
-
 
 .App-header nav {
   display: flex;
@@ -229,43 +228,52 @@ body, html {
     opacity: 0.8;
   }
 }
+
 /* Section Styles */
 section {
   padding: 5vh 5vw; /* Use vw and vh for padding */
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 5vh; /* Consistent spacing between sections */
 }
 
-.about-section, .demo-section, .presentation-section, .team-section {
-  background-color: white;
-  margin-bottom: 5vh; /* Space sections consistently using vh */
-}
-
-.about-content, .demo-content, .presentation-content, .team-content {
+/* Common styles for all content sections */
+.section-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.about-image img, .demo-video iframe, .presentation-video iframe, .team-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Flex Alignment */
-.about-content .about-text, .demo-content .demo-text, .presentation-content .presentation-text, .team-content .team-text {
-  flex: 1;
-  padding-right: 2vw; /* Use vw for padding */
-}
-
-.about-content .about-image, .demo-content .demo-video, .presentation-content .presentation-video, .team-content .team-image {
+.section-text {
   flex: 1;
 }
 
-/* Presentation video */
+.section-image, .section-video {
+  flex: 1;
+}
+
+.section-image img {
+  max-width: 100%; /* Ser till att bilden aldrig är större än sitt förälder-element */
+  height: auto; /* Bibehåller proportionerna */
+  max-height: 400px; /* Justera max-höjd beroende på önskad bildstorlek */
+}
+
+
+/* Specific alignment classes for text */
+.section-text-right {
+  text-align: right;
+  padding-left: 2vw; /* Right aligned text needs padding on the left */
+}
+
+.section-text-left {
+  text-align: left;
+  padding-right: 2vw; /* Left aligned text needs padding on the right */
+}
+
+/* Presentation video styling */
 .presentation-video {
   position: relative;
-  padding-bottom: 30%; /* Detta är för 16:9-förhållandet (höjd / bredd = 9/16 = 56.25%) */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width = 9/16 = 56.25%) */
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -278,21 +286,6 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* Team Section Specific Styles */
-.team-section {
-  background-color: #f1f1f1;
-}
-
-.team-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.team-text {
-  padding-right: 2vw; /* Use vw for padding */
 }
 
 /* Typewriter Container */

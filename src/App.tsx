@@ -61,29 +61,26 @@ function App() {
 
       {/* About Section */}
       <section id="about" className="about-section">
-        <h2>About Us</h2>
-        <div className="about-content">
-          <div className="about-text">
+        <div className="section-content">
+          <div className="section-text section-text-left">
+            <h2>About Us</h2>
             <p>
-              At our company, we are dedicated to providing exceptional legal
-              services. With a focus on integrity, trust, and results, we help
-              clients navigate complex legal landscapes with confidence.
+              At our company, we are dedicated to providing exceptional legal services.
+              With a focus on integrity, trust, and results, we help clients navigate 
+              complex legal landscapes with confidence.
             </p>
           </div>
-          <div className="about-image">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Company Image"
-            />
+          <div className="section-image">
+            <img src="https://via.placeholder.com/400x300" alt="Company Image" />
           </div>
         </div>
       </section>
 
+
       {/* Demo Section */}
       <section id="demo" className="demo-section">
-        <h2>Demo</h2>
-        <div className="demo-content">
-          <div className="demo-video">
+        <div className="section-content">
+          <div className="section-video">
             <iframe
               width="560"
               height="315"
@@ -94,28 +91,31 @@ function App() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="demo-text">
+          <div className="section-text section-text-right">
+            <h2>Demo</h2>
             <p>
-              Our demo video showcases how our services can make a difference
-              for you. Watch and learn more about the solutions we offer.
+              Our demo video showcases how our services can make a difference for you. 
+              Watch and learn more about the solutions we offer.
             </p>
           </div>
         </div>
       </section>
 
+
       {/* Presentation Section */}
       <section id="presentation" className="presentation-section">
-        <h2>Presentation</h2>
-        <div className="presentation-content">
-          <div className="presentation-text">
+        <div className="section-content">
+          <div className="section-text section-text-left">
+            <h2>Presentation</h2>
             <p>
-              In this presentation, we provide a deep dive into our services,
-              case studies, and success stories. See how we help our clients
-              achieve their goals.
+              In this presentation, we provide a deep dive into our services, case studies,
+              and success stories. See how we help our clients achieve their goals.
             </p>
           </div>
-          <div className="presentation-video">
+          <div className="section-video">
             <iframe
+              width="560"
+              height="315"
               src="https://www.youtube.com/embed/qFWhLo0sWfQ?start=3642"
               title="Presentation Video"
               frameBorder="0"
@@ -126,22 +126,26 @@ function App() {
         </div>
       </section>
 
+
       {/* Team Section */}
       <section id="team" className="team-section">
-        <h2>Meet the Team</h2>
-        <div className="team-content">
-          <div className="team-text">
-            <p>
-              Our team is composed of skilled professionals with years of
-              experience in delivering top-notch legal services. Each member
-              brings unique expertise to ensure the success of our clients.
-            </p>
-          </div>
-          <div className="team-image">
+        <div className="section-content">
+          <div className="section-image">
             <img src={team_pic} alt="Team Image" />
+          </div>
+          <div className="section-text section-text-right">
+            <h2>Meet the Team</h2>
+            <p>
+              Our team is composed of skilled professionals with years of experience
+              in delivering top-notch legal services. Each member brings unique expertise
+              to ensure the success of our clients.
+            </p>
           </div>
         </div>
       </section>
+
+
+
     </div>
   );
 }
